@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Club Wallpaper</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="club-scene" aria-label="3D night club audio visualizer"></canvas>
+      <section class="control-panel" aria-label="Controls">
+        <div class="brand">
+          <span class="mark"></span>
+          <div>
+            <h1>Neon Club Wallpaper</h1>
+            <p id="trackName">尚未載入音樂</p>
+          </div>
+        </div>
+        <div class="controls">
+          <label class="file-button" title="選擇本地音樂">
+            <input id="audioFile" type="file" accept="audio/*" />
+            載入
+          </label>
+          <button id="playPause" type="button" title="播放或暫停">播放</button>
+          <button id="fullscreen" type="button" title="全螢幕">全螢幕</button>
+          <button id="hideControls" type="button" title="隱藏控制列">隱藏</button>
+        </div>
+        <div class="meters" aria-hidden="true">
+          <span id="bassMeter"></span>
+          <span id="midMeter"></span>
+          <span id="highMeter"></span>
+        </div>
+        <div class="sliders">
+          <label>
+            <span>能量</span>
+            <input id="energy" type="range" min="0.5" max="2.5" value="1.25" step="0.01" />
+          </label>
+          <label>
+            <span>雷射</span>
+            <input id="lasers" type="range" min="0.2" max="2.4" value="1.2" step="0.01" />
+          </label>
+        </div>
+      </section>
+      <audio id="audio" crossorigin="anonymous"></audio>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
